@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+.primarynav {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 16px;
+}
+
+.primarynav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  max-width: 960px;
+  margin: 80px auto;
+}
+.primarynav img {
+  width: 100%;
+}
+.primarynav a {
+  text-decoration: none;
+  color: #4f4f4f;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.cart {
+  fill: #4f4f4f;
+  color: #4f4f4f;
+  padding-top: 8px;
+}
+
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.wrapper h1 {
+  color: #4f4f4f;
+  margin: 40px 0;
+}
+
+.wrapper .topBuns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.wrapper .orderGroup {
+  width: 304px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.wrapper .orderGroup:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+}
+
+.orderGroup img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.orderGroup .productDetails {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  color: #4f4f4f;
+  padding: 24px;
+}
+
+.orderGroup .productDetails h2 {
+  margin: 0;
+}
+
+button.order {
+  background-color: #b10dc9;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+button {
+  padding: 24px;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  color: #4f4f4f;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border: none;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+button.order:hover {
+  cursor: pointer;
+  background-color: #860e9b;
+  color: #ffffff;
+}
+
+button:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+}
+
+.row {
+  text-align: center;
+}
+
+.row .browse {
+  width: 296px;
+}
+
+.topBuns a {
+  text-decoration: none;
+}
