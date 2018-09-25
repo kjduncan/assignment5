@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Title of the document</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <nav class="primarynav">
+    <ul class="secondary">
+      <li>
+        <a href="./index.html">
+          <img class="logoHome" src="./assets/images/bblogo.svg" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="./browse.html">Our Buns</a>
+      </li>
+
+      <li>
+        <a href="">Find Us</a>
+      </li>
+      <li>
+        <a href="">
+          About
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img class="cart" src="./assets/images/cart.svg" alt="">
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="wrapper">
+    <div class="singleProduct">
+        <div class="productGroup">
+          <img src="./assets/images/original.jpg" alt="">
+          <div class="productDetails">
+            <h2>The bun where it all began</h2>
+            <p>This bun is most delicious bun in the world. Full of delicious cinnamon sugar, your mouth won't know what just hit it.</p>
+          </div>
+          <div class="productDetails">
+            <h2>Nutrition</h2>
+            <h3>250 Calories</h3>
+            <ul>
+              <li>Butter</li>
+              <li>Sugar</li>
+              <li>Cinnamon</li>
+              <li>Flour</li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="productGroup">
+          <div class="productDetails">
+            <div class="chooseItems">
+              <h2>choose glaze</h2>
+                <ul class="row">
+                  <li>
+                    <input checked="checked" id="glaze_cream" type="radio" name="glaze" value="creamCheese">
+                    <label for="glaze_cream">Cream Cheese</label>
+                  </li>
+                  <li>
+                    <input id="glaze_royal" type="radio" name="glaze" value="royalIcing">
+                    <label for="glaze_royal">Royal Icing</label>
+                  </li>
+                  <li>
+                    <input id="glaze_orange" type="radio" name="glaze" value="orange">
+                    <label for="glaze_orange">Orange</label>
+                  </li>
+                  <li>
+                    <input id="glaze_blueberry" type="radio" name="glaze" value="blueberry">
+                    <label for="glaze_blueberry">Blueberry</label>
+                  </li>
+                </ul>
+            </div>
+          </div>
+          <div class="productDetails">
+            <div class="chooseItems">
+              <h2>choose quantity</h2>
+                <ul class="row">
+                  <li>
+                    <input  checked="checked" id="ct_one" type="radio" name="quantity" value="ctOne">
+                    <label for="ct_one">1 ct 2.99</label>
+                  </li>
+                  <li>
+                    <input id="ct_six" type="radio" name="quantity" value="ctSix">
+                    <label for="ct_six">6 ct 12.99</label>
+                  </li>
+                  <li>
+                    <input id="ct_eight" type="radio" name="quantity" value="ctEight">
+                    <label for="ct_eight">8 ct 16.99</label>
+                  </li>
+                  <li>
+                    <input id="ct_twelve" type="radio" name="quantity" value="ctTwelve">
+                    <label for="ct_twelve">12 ct 21.99</label>
+                  </li>
+                </ul>
+            </div>
+            <button class="order">Add to cart</button>
+          </div>
+        </div>
+    </div>
+  </div>
+</body>
+
+</html>
