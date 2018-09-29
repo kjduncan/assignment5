@@ -58,8 +58,8 @@
     if (e && e.target) {
       e.preventDefault();
       console.warn(e.target.id);
-      console.warn(_.find(defaultOrder, function(o) { return o.id === 6; }));
-      shoppingCart.push(_.find(defaultOrder, function(o) { return o.id === e.target.id; }));
+      console.warn(_.find(defaultOrder, function(o) { return o.id === parseInt(e.target.id); }));
+      shoppingCart.push(_.find(defaultOrder, function(o) { return o.id === parseInt(e.target.id); }));
     }
     console.warn(shoppingCart);
   };
