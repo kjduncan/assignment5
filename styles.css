@@ -41,10 +41,29 @@
   font-size: 24px;
 }
 
+.cart-wrapper {
+  position: relative;
+}
+
 .cart {
   fill: #4f4f4f;
   color: #4f4f4f;
   padding-top: 8px;
+}
+
+#cart-preview-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  font-size: 14px;
+  background-color: #000000;
+  border-radius: 9px;
+  color: #ffffff;
+  line-height: 18px;
+  min-width: 18px;
+  text-align: center;
+  padding: 0 2px;
+
 }
 
 body {

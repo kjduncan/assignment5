@@ -72,10 +72,14 @@
       id: id,
     };
     cartObject.name = defaultOrder[id - 1].name;
+
     return cartObject;
-
-
   };
+
+  function saveShoppingCart(cart) {
+    // this is how you save to local storage
+    localStorage.setItem('shoppingCart', JSON.stringify(cart));
+  }
 
   var shoppingCart = [];
 
@@ -90,7 +94,6 @@
         quantityOptions = optionsVal(document.getElementsByName('quantity'));
         glazeOptions = optionsVal(document.getElementsByName('glaze'));
       } else {
-        console.warn(defaultOrder[(e.target.id - 1)].options.quantity);
         quantityOptions = defaultOrder[(e.target.id - 1)].options.quantity;
         glazeOptions = defaultOrder[e.target.id - 1].options.glaze;
       }
@@ -98,11 +101,11 @@
       var shoppingCartItem = buildCartItem(e.target.id, glazeOptions, quantityOptions);
 
       shoppingCart.push(shoppingCartItem);
-      console.dir(e.target);
-      console.warn(shoppingCart);
-      // shoppingCart.push(_.find(defaultOrder, function(o) { return o.id === parseInt(e.target.id); }));
+      // after adding item to array save the array/shopping cart to local storage
+      saveShoppingCart(shoppingCart);
+      // also update the shopping cart preview count after adding item
+      updateShoppingCartPreviewCount();
     }
-    console.warn(shoppingCart);
   };
 
   var elements = document.getElementsByClassName("order");
@@ -110,10 +113,29 @@
     elements[i].addEventListener("click", addToCart)
   }
 
-  // _.find(defaultOrder, ['id', 6]);
+  function updateShoppingCartPreviewCount() {
+    // get shopping cart count element to append number later
+    var shoppingCartPreviewCountEl = document.getElementById("cart-preview-count");
+    if (shoppingCart.length >= 1) {
+      // if the shopping cart has one or more items, append that number to the preview count element
+      shoppingCartPreviewCountEl.innerHTML = shoppingCart.length;
+    } else {
+      // if it doesn't remove any number
+      shoppingCartPreviewCountEl.innerHTML = "";
+    }
+  }
 
+  // this runs on page load to check if anything has been saved to local storage
+  function loadShoppingCart() {
+    if (localStorage.getItem('shoppingCart')) {
+      // the data is saved to local storage as JSON so we need to parse the json to turn it into an js object
+      shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
+    }
 
+    // update cart preview number, the function has the logic to display a number if greater than one item
+    updateShoppingCartPreviewCount();
+  }
 
-
+  loadShoppingCart();
 
 }());
